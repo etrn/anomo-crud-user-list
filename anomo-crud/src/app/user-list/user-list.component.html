@@ -1,3 +1,14 @@
-<p>
-  user-list works!
-</p>
+<h3 class="user-list-heading">List of Users</h3>
+<hr>
+
+<div class="list-users">
+    <ul class="list-group">
+    	<li *ngFor="let user of usersList" 
+			class="list-group-item"
+			(click)="userSelected(user)"
+			[class.active]="isSelected(user) && isClear">
+			{{ user.name}}
+			<div class="deleteUsers" (click)="deleteUser(user._id)">X</div>
+		</li>
+	</ul>
+</div>
