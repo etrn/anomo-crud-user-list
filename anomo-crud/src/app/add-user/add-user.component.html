@@ -34,7 +34,7 @@
 </div>
 
 <div class="form-group">
-	<button *ngIf="!isInsert" class="btn btn-primary" (click)="addUser()">Add User</button> 
+	<button *ngIf="isInsert" class="btn btn-primary" (click)="addUser()">Add User</button> 
 	<button *ngIf="!isInsert" class="btn btn-primary" (click)="updateUser()">Update</button>
 	<button  class="btn " (click)="clearAddUser()">Clear</button>
 </div>
